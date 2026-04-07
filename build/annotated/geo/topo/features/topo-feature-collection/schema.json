@@ -68,7 +68,7 @@
       "items": {
         "anyOf": [
           {
-            "$ref": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
+            "$ref": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.json"
           },
           {
             "$ref": "#/$defs/PointOptions"

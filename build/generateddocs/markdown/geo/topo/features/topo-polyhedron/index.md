@@ -456,7 +456,7 @@ A feature type using a topology property to reference points defining Polyhedron
 #### jsonld
 ```jsonld
 {
-  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld",
   "type": "FeatureCollection",
   "features": [
     {
@@ -891,8 +891,8 @@ A feature type using a topology property to reference points defining Polyhedron
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.opengis.net/def/glossary/term/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -904,13 +904,13 @@ A feature type using a topology property to reference points defining Polyhedron
     dcterms:spatial [ a geojson:Polyhedron ;
             geojson:coordinates ( ( ( ( ( 4.798167e+05 5.705862e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798242e+05 5.705854e+06 110 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798242e+05 5.705854e+06 110 ) ) ) ( ( ( 4.798297e+05 5.705859e+06 120 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798297e+05 5.705859e+06 120 ) ) ) ( ( ( 4.798222e+05 5.705867e+06 120 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798167e+05 5.705862e+06 110 ) ( 4.798222e+05 5.705867e+06 120 ) ) ) ) ) ] ;
     dcterms:time [ time:hasTime ( "2014-04-24T10:50:18Z" ".." ) ] ;
-    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
-    rdfs:seeAlso [ rdfs:label "This feature is of type 'building'" ;
-            ns2:relation <http://www.iana.org/assignments/relation/type> ;
-            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ],
-        [ rdfs:label "Cadastral parcel 313 in district WÃ¼nnenberg (016)" ;
-            ns2:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
-            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ] ;
+    ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
+    rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district WÃ¼nnenberg (016)" ;
+            ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
+            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
+        [ rdfs:label "This feature is of type 'building'" ;
+            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] ;
     geojson:topology [ a geojson:Polyhedron ;
@@ -970,11 +970,11 @@ description: Feature with Polyhedral geometry by reference
 $defs:
   PolyhedralFeature:
     allOf:
-    - $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+    - $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
     - properties:
         topology:
           allOf:
-          - $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+          - $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
           - oneOf:
             - properties:
                 type:
@@ -983,7 +983,7 @@ $defs:
       required:
       - topology
   ContainedFeatureCollection:
-    $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
+    $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
 oneOf:
 - $ref: '#/$defs/PolyhedralFeature'
 - $ref: '#/$defs/ContainedFeatureCollection'
@@ -992,8 +992,8 @@ oneOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.json)
-* JSON version: [schema.json](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-polyhedron/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-polyhedron/schema.yaml)
 
 
 # JSON-LD Context
@@ -1142,13 +1142,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/rob-metalinkage/topo-feature](https://github.com/rob-metalinkage/topo-feature)
+* URL: [https://github.com/avillar/topo-feature](https://github.com/avillar/topo-feature)
 * Path: `_sources/features/topo-polyhedron`
 

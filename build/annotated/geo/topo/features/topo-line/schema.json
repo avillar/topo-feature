@@ -3,14 +3,14 @@
   "description": "Line Feature with geometry by reference",
   "allOf": [
     {
-      "$ref": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
+      "$ref": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.json"
     },
     {
       "properties": {
         "topology": {
           "allOf": [
             {
-              "$ref": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json"
+              "$ref": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.json"
             },
             {
               "properties": {

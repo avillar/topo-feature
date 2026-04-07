@@ -42,7 +42,7 @@ can be solids, swept volumes or any other concept. (It doesnt use TopoJSON coord
 #### jsonld
 ```jsonld
 {
-  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld",
   "type": "Feature",
   "id": "LineP1P2",
   "geometry": null,
@@ -94,7 +94,7 @@ can be solids, swept volumes or any other concept. (It doesnt use TopoJSON coord
 #### jsonld
 ```jsonld
 {
-  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld",
   "type": "Feature",
   "id": "TriangleP1P2P3",
   "geometry": null,
@@ -130,13 +130,13 @@ can be solids, swept volumes or any other concept. (It doesnt use TopoJSON coord
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Feature with defined topology for bounding elements
 allOf:
-- $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions
+- $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions
 - type: object
   properties:
     id:
       type: string
     topology:
-      $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+      $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
       x-jsonld-type: '@id'
       x-jsonld-id: https://purl.org/geojson/vocab#topology
   required:
@@ -148,8 +148,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json)
-* JSON version: [schema.json](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml)
 
 
 # JSON-LD Context
@@ -275,13 +275,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/rob-metalinkage/topo-feature](https://github.com/rob-metalinkage/topo-feature)
+* URL: [https://github.com/avillar/topo-feature](https://github.com/avillar/topo-feature)
 * Path: `_sources/features/topo-feature`
 

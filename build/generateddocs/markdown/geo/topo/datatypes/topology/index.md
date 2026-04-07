@@ -40,7 +40,7 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 #### jsonld
 ```jsonld
 {
-  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/context.jsonld",
   "type": "LineString",
   "references": [
     "P1",
@@ -148,8 +148,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json)
-* JSON version: [schema.json](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml)
 
 
 # JSON-LD Context
@@ -185,13 +185,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/rob-metalinkage/topo-feature](https://github.com/rob-metalinkage/topo-feature)
+* URL: [https://github.com/avillar/topo-feature](https://github.com/avillar/topo-feature)
 * Path: `_sources/datatypes/topology`
 

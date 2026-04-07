@@ -1,5 +1,5 @@
 {
-  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
   "type": "FeatureCollection",
   "id": "line",
   "features": [

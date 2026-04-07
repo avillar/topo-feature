@@ -5234,6 +5234,6 @@ Demonstration of a transform from CityJSON to TopoFeature
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/rob-metalinkage/topo-feature](https://github.com/rob-metalinkage/topo-feature)
+* URL: [https://github.com/avillar/topo-feature](https://github.com/avillar/topo-feature)
 * Path: `_sources/alignments/cityjson-transform`
 

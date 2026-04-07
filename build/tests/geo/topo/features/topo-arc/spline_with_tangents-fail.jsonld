@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+    "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
     {
       "@base": "http://www.example.com/features/"
     }
