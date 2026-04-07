@@ -3,12 +3,12 @@
   "abstract": "Features with geometry defined via  generalised topology between identified objects (Features).",
   "description": "Defines Feature (object) topology using a _topology_ property to reference an ordered list of references to other features. \n\nOther features may be either features with topology properties or GeoJSON (or FG-JSON) geometry properties.\n\nTopo-Feature defined objects can be solids, swept volumes or any other concept. \n\nTopo-Feature allows for general topology to be described between independent features (objects) with any geometry dimensions. \n\nTopo-Feature-Collections define a self-contained set of such objects with referential integrity (all elements are present to fully define geometry coordinates.\n\nNote: This is a generalisation of the TopoJSON concept using inline, nested arrays of coordinates - but not limited to self-contained geometries per feature, duplicated between topologically related features.. \n\n_Topo-Feature allows for explicit CRS. If desired coordinate compaction transformations could be defined as per TopoJSON functionality, using specialised CRS definition._\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-04-07T13:20:17.486976",
+  "modified": "2026-04-07T13:23:50.666610",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"dcf24668555ea7c941d96327412c9a5b10bf970d",
       "shortCommitId": "\"dcf246",
-      "date": "2026-04-06T23:30:31+00:00\""
+      "date": "2026-04-07T13:21:52+00:00\""
     }
   },
   "gitRepository": "https://github.com/avillar/topo-feature",
@@ -191,71 +191,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.geo.topo.features.topo-feature-collection",
-      "name": "TopoFeatureCollection",
-      "highlighted": true,
-      "abstract": "This building block defines a GeoJSON (or FG-JSON) Feature Collection for a set of features with geometries defined by topological relationships. From these it is possible to derive simplified geometries using coordinates for each feature.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-07-05T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2026-04-07",
-      "sources": [],
-      "maturity": "development",
-      "scope": "unstable",
-      "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.geo.json-fg.featureCollection-lenient",
-        "ogc.geo.topo.features.topo-feature",
-        "ogc.geo.json-fg.featureCollection",
-        "ogc.geo.json-fg.feature",
-        "ogc.geo.features.featureCollection",
-        "ogc.geo.features.feature"
-      ],
-      "tags": [
-        "topology",
-        "feature"
-      ],
-      "group": "OGC",
-      "shaclShapes": {
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ],
-        "ogc.geo.topo.features.topo-feature": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ]
-      },
-      "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
-      "schema": {
-        "application/yaml": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml",
-        "application/json": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json"
-      },
-      "sourceSchema": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/schema.json",
-      "sourceLdContext": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/context.jsonld",
-      "resolvedSchemaProperties": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/resolvedProperties.json",
-      "sourceFiles": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/",
-      "rdfData": [],
-      "validationPassed": false,
-      "testOutputs": "https://github.com/avillar/topo-feature/blob/master/build/tests/geo/topo/features/topo-feature-collection/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-feature-collection/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-feature-collection/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature-collection"
-        }
-      }
-    },
-    {
       "itemIdentifier": "ogc.geo.topo.features.topo-feature",
       "name": "Feature with topology",
       "highlighted": true,
@@ -270,8 +205,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.topo.datatypes.topology",
-        "ogc.geo.topo.features.topo-feature-collection"
+        "ogc.geo.topo.features.topo-feature-collection",
+        "ogc.geo.topo.datatypes.topology"
       ],
       "shaclClosures": [
         "examples/points.ttl"
@@ -283,12 +218,12 @@
       "group": "OGC",
       "shaclShapes": {
         "ogc.geo.topo.features.topo-feature": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
@@ -342,21 +277,21 @@
       ],
       "shaclShapes": {
         "ogc.geo.topo.features.topo-arc": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.geo.topo.datatypes.topology",
-        "ogc.geo.topo.features.topo-feature"
+        "ogc.geo.topo.features.topo-feature",
+        "ogc.geo.topo.datatypes.topology"
       ],
       "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
       "schema": {
@@ -410,17 +345,17 @@
       ],
       "shaclShapes": {
         "ogc.geo.topo.features.topo-feature": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.geo.topo.datatypes.topology",
-        "ogc.geo.topo.features.topo-feature"
+        "ogc.geo.topo.features.topo-feature",
+        "ogc.geo.topo.datatypes.topology"
       ],
       "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
       "schema": {
@@ -450,6 +385,71 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.topo.features.topo-feature-collection",
+      "name": "TopoFeatureCollection",
+      "highlighted": true,
+      "abstract": "This building block defines a GeoJSON (or FG-JSON) Feature Collection for a set of features with geometries defined by topological relationships. From these it is possible to derive simplified geometries using coordinates for each feature.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-07-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-07",
+      "sources": [],
+      "maturity": "development",
+      "scope": "unstable",
+      "dependsOn": [
+        "ogc.geo.json-fg.featureCollection",
+        "ogc.geo.features.featureCollection",
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.geo.topo.features.topo-feature",
+        "ogc.geo.json-fg.feature",
+        "ogc.geo.features.feature",
+        "ogc.geo.json-fg.featureCollection-lenient"
+      ],
+      "tags": [
+        "topology",
+        "feature"
+      ],
+      "group": "OGC",
+      "shaclShapes": {
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature": [
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ]
+      },
+      "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
+      "schema": {
+        "application/yaml": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml",
+        "application/json": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json"
+      },
+      "sourceSchema": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/schema.json",
+      "sourceLdContext": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/context.jsonld",
+      "resolvedSchemaProperties": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/resolvedProperties.json",
+      "sourceFiles": "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/avillar/topo-feature/blob/master/build/tests/geo/topo/features/topo-feature-collection/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-feature-collection/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-feature-collection/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature-collection"
+        }
+      }
+    },
+    {
       "itemIdentifier": "ogc.geo.topo.features.topo-polyhedron",
       "name": "3D (Polyhedron) using nested Polygons and Point topology",
       "highlighted": true,
@@ -471,19 +471,19 @@
       "shaclRules": [],
       "shaclClosures": [],
       "shaclShapes": {
-        "ogc.geo.topo.features.topo-feature": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature": [
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
+        "ogc.geo.topo.features.topo-feature-collection",
         "ogc.geo.topo.features.topo-feature",
-        "ogc.geo.topo.datatypes.topology",
-        "ogc.geo.topo.features.topo-feature-collection"
+        "ogc.geo.topo.datatypes.topology"
       ],
       "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld",
       "schema": {

@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -22,12 +22,12 @@
     rdfs:label "CityJSON to TopoFeature transform" ;
     dct:abstract "Demonstration of a transform from CityJSON to TopoFeature"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-10-18T08:31:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/alignments/cityjson-transform/index.md> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.alignments.cityjson-transform> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/alignments/cityjson-transform/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.alignments.cityjson-transform> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/alignments/cityjson-transform/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-04-07"^^xsd:date ;
     skos:inScheme <https://avillar.github.io/topo-feature/> ;
@@ -47,10 +47,10 @@
     rdfs:label "Line using Point References" ;
     dct:abstract "Demonstration of a schema using coordinates of points, without duplication. Reuses context but constrains to Line types"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-line/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-line/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-line/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-line> ] ;
     dct:hasVersion "0.1" ;
@@ -61,20 +61,12 @@
     dcat:keyword "3D",
         "geometry",
         "topology" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
@@ -84,7 +76,15 @@
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.topo.datatypes.topology>,
         <bblocks://ogc.geo.topo.features.topo-feature> ;
     bblocks:hasSourceJsonLdContext <https://avillar.github.io/topo-feature/_sources/features/topo-line/context.jsonld> ;
@@ -101,10 +101,10 @@
     dct:created "2023-11-01T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-polyhedron> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-polyhedron/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-polyhedron/index.md> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-polyhedron/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-polyhedron/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-04-07"^^xsd:date ;
     skos:inScheme <https://avillar.github.io/topo-feature/> ;
@@ -113,16 +113,20 @@
     dcat:keyword "3D",
         "geometry",
         "topology" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/context.jsonld> ;
@@ -132,11 +136,7 @@
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-polyhedron/schema.yaml> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.geo.topo.datatypes.topology>,
         <bblocks://ogc.geo.topo.features.topo-feature>,
         <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
@@ -147,18 +147,18 @@
 
 <https://avillar.github.io/topo-feature/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Ne0a88171d34143119567d86fb5092e9d ;
+    prov:wasAttributedTo _:N917fc20b7b864c3fa70b0ad300bb38ea ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-04-07T13:20:34.640533"^^xsd:dateTime ;
-            prov:startedAtTime "2026-04-07T13:20:34.519708"^^xsd:dateTime ;
+            prov:endedAtTime "2026-04-07T13:24:09.719706"^^xsd:dateTime ;
+            prov:startedAtTime "2026-04-07T13:24:09.492392"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:615b7bf1292df933853191978880c07aaee2fab3" ;
-                    rdfs:seeAlso <https://avillar.github.io/topo-feature/build/register.json> ],
-                [ a prov:Entity ;
                     dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Ne0a88171d34143119567d86fb5092e9d ] .
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:c7fd964b8a232645e9d4291425cc14207840a2a5" ;
+                    rdfs:seeAlso <https://avillar.github.io/topo-feature/build/register.json> ] ;
+            prov:wasAssociatedWith _:N917fc20b7b864c3fa70b0ad300bb38ea ] .
 
 <bblocks://ogc.geo.topo.features.topo-arc> a skos:Concept,
         dcat:Dataset,
@@ -183,6 +183,20 @@
         "topology" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-arc> ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
@@ -196,20 +210,6 @@
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-arc> ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
-                <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.topo.datatypes.topology>,
         <bblocks://ogc.geo.topo.features.topo-feature> ;
@@ -227,10 +227,10 @@
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/datatypes/topology/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.datatypes.topology> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/datatypes/topology/index.json> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/datatypes/topology/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.datatypes.topology> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-04-07"^^xsd:date ;
     skos:inScheme <https://avillar.github.io/topo-feature/> ;
@@ -239,17 +239,17 @@
     dcat:keyword "3D",
         "geometry",
         "topology" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://avillar.github.io/topo-feature/_sources/datatypes/topology/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
@@ -263,12 +263,12 @@
     rdfs:label "TopoFeatureCollection" ;
     dct:abstract "This building block defines a GeoJSON (or FG-JSON) Feature Collection for a set of features with geometries defined by topological relationships. From these it is possible to derive simplified geometries using coordinates for each feature."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-07-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-feature-collection/index.md> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-feature-collection/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature-collection> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-feature-collection/index.md> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature-collection> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-04-07"^^xsd:date ;
     skos:inScheme <https://avillar.github.io/topo-feature/> ;
@@ -276,7 +276,11 @@
     skos:topConceptOf <https://avillar.github.io/topo-feature/> ;
     dcat:keyword "feature",
         "topology" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
@@ -286,20 +290,16 @@
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld> ;
             prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
         <bblocks://ogc.geo.features.featureCollection>,
         <bblocks://ogc.geo.json-fg.feature>,
@@ -310,7 +310,7 @@
     bblocks:hasSourceJsonLdContext <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
 
 <bblocks://ogc.geo.topo.features.topo-feature> a skos:Concept,
         dcat:Dataset,
@@ -321,10 +321,10 @@
     dct:created "2023-07-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/markdown/geo/topo/features/topo-feature/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-feature/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/bblock/ogc.geo.topo.features.topo-feature> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/topo-feature/build/generateddocs/json-full/geo/topo/features/topo-feature/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-04-07"^^xsd:date ;
     skos:inScheme <https://avillar.github.io/topo-feature/> ;
@@ -332,7 +332,17 @@
     skos:topConceptOf <https://avillar.github.io/topo-feature/> ;
     dcat:keyword "feature",
         "topology" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml> ;
             prof:hasRole role:schema ],
@@ -340,19 +350,9 @@
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld> ;
             prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
-            prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
-                <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
             prof:hasArtifact <https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
                 <https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
             prof:hasRole role:validation ] ;
@@ -382,7 +382,7 @@ Note: This is a generalisation of the TopoJSON concept using inline, nested arra
 
 _Topo-Feature allows for explicit CRS. If desired coordinate compaction transformations could be defined as per TopoJSON functionality, using specialised CRS definition._
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-04-07T13:20:17.486976"^^xsd:dateTime ;
+    dct:modified "2026-04-07T13:23:50.666610"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-dev.opengis.net/fuseki/query> ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.geo.topo.alignments.cityjson-transform>,
@@ -393,24 +393,24 @@ _Topo-Feature allows for explicit CRS. If desired coordinate compaction transfor
         <bblocks://ogc.geo.topo.features.topo-line>,
         <bblocks://ogc.geo.topo.features.topo-polyhedron> ;
     skos:prefLabel "Building Blocks - Topo-Feature" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
-            dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://avillar.github.io/topo-feature/build/bblocks.jsonld> ],
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://avillar.github.io/topo-feature/build/register.json> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://avillar.github.io/topo-feature/build/bblocks.ttl> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://avillar.github.io/topo-feature/build/register.json> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://avillar.github.io/topo-feature/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://avillar.github.io/topo-feature/build/bblocks.jsonld> ] ;
     foaf:homepage <https://avillar.github.io/topo-feature/> ;
     bblocks:hasValidationReport <https://avillar.github.io/topo-feature/build/tests/report.html> .
 
-_:Ne0a88171d34143119567d86fb5092e9d a prov:Agent,
+_:N917fc20b7b864c3fa70b0ad300bb38ea a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.26" ;
+    dct:hasVersion "0.5.27" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
