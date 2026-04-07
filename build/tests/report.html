@@ -64,9 +64,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-03-05T23:21:13.503757+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 7 / 7 (100%)
+            <small class="datetime">Generated at 2026-04-07T07:04:31.887030+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 6 / 7 (85.71%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -205,7 +205,7 @@
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.topo.features.topo-feature-collection" id="bblock-ogc.geo.topo.features.topo-feature-collection">
                             <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button collapsed" type="button"
+                                <button class="accordion-button " type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.geo\.topo\.features\.topo-feature-collection">
                                     <div class="flex-fill">
@@ -214,16 +214,16 @@
                                         <a class="anchor" href="#bblock-ogc.geo.topo.features.topo-feature-collection">¶</a>
                                     </div>
 
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (100% passed)
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (75% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.topo.features.topo-feature-collection">
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.geo.topo.features.topo-feature-collection">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-success">
-                                            Test passed: 4 / 4
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 3 / 4
                                         </p>
                                         <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.topo.features.topo-feature-collection-1">
                                             <div class="card-body">
@@ -240,13 +240,13 @@
                                                         <span class="badge text-bg-info">Requires fail</span>
                                                     <a class="anchor" href="#item-ogc.geo.topo.features.topo-feature-collection-1">¶</a>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-4">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
-                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace entry-message section-general text-danger">Test was expected to fail but it did not.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using linestring-fail.json from test resources</div>
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
@@ -260,58 +260,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab1: &lt;file:///github/workspace/P3&gt;/geojson:geometry,&lt;file:///github/workspace/P1&gt;/geojson:geometry
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab3: &lt;file:///github/workspace/P3&gt;/geojson:geometry,&lt;file:///github/workspace/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b3: &lt;file:///github/workspace/P3&gt;/geojson:geometry,&lt;file:///github/workspace/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b1: &lt;file:///github/workspace/P3&gt;/geojson:geometry,&lt;file:///github/workspace/P1&gt;/geojson:geometry
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
-  Conforms: False
-  Results (2):
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: topo:testTopoReferencesExist
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/P1&gt; &lt;file:///github/workspace/P2&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/P2&gt;
-  	Result Path: geojson:relatedFeatures
-  	Source Constraint: [ sh:message Literal(&quot;Referenced features must be present within current graph closure for  topological feature.&quot;) ; sh:select Literal(&quot;
-          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
-  
-          SELECT $this (geojson:relatedFeatures as ?path) (?ref as ?value)
-          WHERE {
-           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           $this a ?geomtype .
-           FILTER ( ?geomtype != geojson:Polygon)
-           FILTER NOT EXISTS { ?ref ?p ?o }
-          }
-  &quot;) ]
-  	Message: Referenced features must be present within current graph closure for  topological feature.
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: topo:testTopoLinesReferencePoints
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/P1&gt; &lt;file:///github/workspace/P2&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/P2&gt;
-  	Result Path: geojson:topology
-  	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
-          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          prefix dct:     &lt;http://purl.org/dc/terms/&gt;
-          PREFIX geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt;
-  
-          SELECT $this (geojson:topology as ?path) (?ref as ?value)
-          WHERE {
-           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           FILTER NOT EXISTS {
-               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
-          }
-  &quot;) ]
-  	Message: Lines topologies must reference points within current graph closure.
+  Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;file:///github/workspace/LineP1P2&gt;/geojson:topology
- - Shape topo:testTopoLinesReferencePoints: &lt;file:///github/workspace/LineP1P2&gt;/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -349,16 +307,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab1: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab3: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b3: &lt;http://www.example.com/features/P1&gt;/geojson:geometry,&lt;http://www.example.com/features/P2&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b1: &lt;http://www.example.com/features/P1&gt;/geojson:geometry,&lt;http://www.example.com/features/P2&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: *none*
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -396,16 +354,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab1: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab3: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b3: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b1: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
- - Shape topo:testTopoLinesReferencePoints: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -443,16 +401,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab1: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry,&lt;http://www.example.com/features/P3&gt;/geojson:geometry
- - Shape _:n1d79a36b589b4d4bbe7c6408e8d0071ab3: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry,&lt;http://www.example.com/features/P3&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b3: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P3&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b1: &lt;http://www.example.com/features/P2&gt;/geojson:geometry,&lt;http://www.example.com/features/P3&gt;/geojson:geometry,&lt;http://www.example.com/features/P1&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP3P1&gt;/geojson:topology,&lt;http://www.example.com/features/LineP2P3&gt;/geojson:topology,&lt;http://www.example.com/features/TriangleP1P2P3&gt;/geojson:topology,&lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
- - Shape topo:testTopoLinesReferencePoints: &lt;http://www.example.com/features/LineP3P1&gt;/geojson:topology,&lt;http://www.example.com/features/LineP2P3&gt;/geojson:topology,&lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -519,16 +477,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nd612a1ad8af74c7fb407e930deb89ce8b1: *none*
- - Shape _:nd612a1ad8af74c7fb407e930deb89ce8b3: *none*
+ - Shape _:n65ab2030465141ca9e1ede7e42a543eab1: *none*
+ - Shape _:n65ab2030465141ca9e1ede7e42a543eab3: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
 </div>
                                                     </div>
                                                 </div>
@@ -571,16 +529,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nd612a1ad8af74c7fb407e930deb89ce8b1: *none*
- - Shape _:nd612a1ad8af74c7fb407e930deb89ce8b3: *none*
+ - Shape _:n65ab2030465141ca9e1ede7e42a543eab1: *none*
+ - Shape _:n65ab2030465141ca9e1ede7e42a543eab3: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/TriangleP1P2P3&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/TriangleP1P2P3&gt;/geojson:topology
 </div>
                                                     </div>
                                                 </div>
@@ -688,16 +646,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -780,16 +738,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -871,16 +829,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -963,16 +921,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1014,16 +972,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1065,16 +1023,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/arc1&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/arc1&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1116,16 +1074,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/chord1&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1167,16 +1125,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1218,16 +1176,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1269,16 +1227,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/1853004&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1345,16 +1303,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfe4e61ecac8a4f2b8adabc6bd832a37cb1: *none*
- - Shape _:nfe4e61ecac8a4f2b8adabc6bd832a37cb3: *none*
+ - Shape _:nb29e35b4d3a34e8c875a2e42a0810f82b3: *none*
+ - Shape _:nb29e35b4d3a34e8c875a2e42a0810f82b1: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/LineP1P2&gt;/geojson:topology
 </div>
                                                     </div>
                                                 </div>
@@ -1396,16 +1354,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfe4e61ecac8a4f2b8adabc6bd832a37cb1: *none*
- - Shape _:nfe4e61ecac8a4f2b8adabc6bd832a37cb3: *none*
+ - Shape _:nb29e35b4d3a34e8c875a2e42a0810f82b3: *none*
+ - Shape _:nb29e35b4d3a34e8c875a2e42a0810f82b1: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/MultiLineP1P2P3&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/MultiLineP1P2P3&gt;/geojson:topology
 </div>
                                                     </div>
                                                 </div>
@@ -1468,16 +1426,16 @@ On instance[&#x27;topology&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n03b93a026441452e9f3549dffa0d3bf2b3: &lt;http://www.example.com/features/P479816.67_5705861.672_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479816.67_5705861.672_110&gt;/geojson:geometry,&lt;http://www.example.com/features/DENW19AL0000giv5BL&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_120&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_120&gt;/geojson:geometry
- - Shape _:n03b93a026441452e9f3549dffa0d3bf2b1: &lt;http://www.example.com/features/P479816.67_5705861.672_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479816.67_5705861.672_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_120&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_120&gt;/geojson:geometry
+ - Shape _:nf61622f146a04fbe8ce614a9663b33dcb1: &lt;http://www.example.com/features/P479816.67_5705861.672_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_120&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_120&gt;/geojson:geometry,&lt;http://www.example.com/features/P479816.67_5705861.672_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_100&gt;/geojson:geometry
+ - Shape _:nf61622f146a04fbe8ce614a9663b33dcb3: &lt;http://www.example.com/features/P479816.67_5705861.672_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_120&gt;/geojson:geometry,&lt;http://www.example.com/features/P479822.187_5705866.783_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_110&gt;/geojson:geometry,&lt;http://www.example.com/features/P479829.666_5705858.785_120&gt;/geojson:geometry,&lt;http://www.example.com/features/DENW19AL0000giv5BL&gt;/geojson:geometry,&lt;http://www.example.com/features/P479816.67_5705861.672_100&gt;/geojson:geometry,&lt;http://www.example.com/features/P479824.155_5705853.684_100&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/DENW19AL0000giv5BL&gt;/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: &lt;http://www.example.com/features/DENW19AL0000giv5BL&gt;/geojson:topology
 </div>
                                                     </div>
                                                 </div>
@@ -1503,7 +1461,7 @@ On instance[&#x27;topology&#x27;]:
                 if (/^#(bblock|item)-/.test(location.hash)) {
                     const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
                     if (highlight) {
-                        highlight.closest('.accordion-collapse').classList.add('show');
+                        highlight.querySelector('.accordion-collapse').classList.add('show');
                         highlight.classList.add('highlighted');
                     }
                 }

@@ -1,13 +1,13 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Feature with defined topology for bounding elements
 allOf:
-- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions
+- $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions
 - type: object
   properties:
     id:
       type: string
     topology:
-      $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+      $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
       x-jsonld-type: '@id'
       x-jsonld-id: https://purl.org/geojson/vocab#topology
   required:

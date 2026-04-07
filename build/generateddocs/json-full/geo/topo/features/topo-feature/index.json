@@ -28,25 +28,26 @@
   "group": "OGC",
   "shaclShapes": {
     "ogc.geo.topo.features.topo-feature": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+      "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.topo.features.topo-feature-collection": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+      "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ]
   },
-  "ldContext": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
+  "ldContext": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
   "schema": {
-    "application/yaml": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
+    "application/yaml": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml",
+    "application/json": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
   },
-  "sourceSchema": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/schema.json",
-  "sourceLdContext": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/context.jsonld",
-  "sourceFiles": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/",
+  "sourceSchema": "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature/schema.json",
+  "sourceLdContext": "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature/context.jsonld",
+  "resolvedSchemaProperties": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/resolvedProperties.json",
+  "sourceFiles": "https://rob-metalinkage.github.io/topo-feature/_sources/features/topo-feature/",
   "rdfData": [],
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/topo-feature/blob/master/build/tests/geo/topo/features/topo-feature/",
+  "testOutputs": "https://github.com/rob-metalinkage/topo-feature/blob/master/build/tests/geo/topo/features/topo-feature/",
   "description": "## Feature with explicit Topology\n\nA feature type using a topology property to reference an ordered list of references to other features. \n\nOther features may be either features with topology properties or GeoJSON (or FG-JSON) point objects.\n\nThis is a generalisation of the TopoJSON concept using inline data, (nested sets of coordinates) but not limited to the LineStrings. Topological defined objects \ncan be solids, swept volumes or any other concept. (It doesnt use TopoJSON coordinate compaction and transformation, however it does allow for explicit CRS, and coordinate compaction transformations could be defined as derived CRS if required.)\n\n",
   "examples": [
     {
@@ -60,17 +61,17 @@
             "examples/points.ttl"
           ],
           "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.json"
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n<http://www.example.com/features/LineP1P2> a geojson:Feature ;\n    geojson:topology [ a geojson:LineString ;\n            geojson:relatedFeatures ( <http://www.example.com/features/P1> <http://www.example.com/features/P2> ) ] .\n\n",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.ttl"
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.ttl"
         }
       ]
     },
@@ -86,22 +87,22 @@
             "examples/lines.ttl"
           ],
           "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.json"
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.jsonld"
+          "code": "{\n  \"@context\": \"https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n<http://www.example.com/features/TriangleP1P2P3> a geojson:Feature ;\n    geojson:topology [ a geojson:Polygon ;\n            geojson:relatedFeatures ( ( <http://www.example.com/features/LineP1P2> <http://www.example.com/features/LineP2P3> <http://www.example.com/features/LineP3P1> ) ) ] .\n\n",
-          "url": "https://ogcincubator.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.ttl"
+          "url": "https://rob-metalinkage.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Feature with defined topology for bounding elements\nallOf:\n- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions\n- type: object\n  properties:\n    id:\n      type: string\n    topology:\n      $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml\n      x-jsonld-type: '@id'\n      x-jsonld-id: https://purl.org/geojson/vocab#topology\n  required:\n  - topology\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
-  "gitRepository": "https://github.com/ogcincubator/topo-feature",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Feature with defined topology for bounding elements\nallOf:\n- $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions\n- type: object\n  properties:\n    id:\n      type: string\n    topology:\n      $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml\n      x-jsonld-type: '@id'\n      x-jsonld-id: https://purl.org/geojson/vocab#topology\n  required:\n  - topology\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
+  "gitRepository": "https://github.com/rob-metalinkage/topo-feature",
   "gitPath": "_sources/features/topo-feature"
 }

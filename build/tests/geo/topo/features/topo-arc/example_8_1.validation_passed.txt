@@ -1,5 +1,5 @@
 Validation report for ogc.geo.topo.features.topo-arc - Non-linear Arc and Spline Descriptions using Point topology
-Generated 2026-03-05T23:21:08.640540+00:00
+Generated 2026-04-07T07:04:26.719037+00:00
 === Files ===
 Using examples/spline_with_tangents.json from examples
 JSON-LD context is present - uplifting
@@ -21,16 +21,16 @@ Validation result for _sources/features/topo-feature-collection/tests/topo-refs-
   Conforms: True
   
 Focus nodes for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoReferencesExist: <http://www.example.com/features/1853004>/geojson:topology
  - Shape topo:testTopoLinesReferencePoints: *none*
+ - Shape topo:testTopoReferencesExist: <http://www.example.com/features/1853004>/geojson:topology
 
 Validation result for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b1: *none*
- - Shape _:nfdc6896febac4ee6b8804347d7213ed7b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b3: *none*
+ - Shape _:n041f067f7204436aa163891f314dfe93b1: *none*
 
 === End SHACL ===
 

@@ -43,7 +43,7 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
   "type": "Feature",
   "id": "LineP1P2",
   "geometry": null,
@@ -98,7 +98,7 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
   "type": "Feature",
   "id": "MultiLineP1P2P3",
   "geometry": null,
@@ -137,11 +137,11 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Line Feature with geometry by reference
 allOf:
-- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+- $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
 - properties:
     topology:
       allOf:
-      - $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+      - $ref: https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
       - properties:
           type:
             type: string
@@ -155,8 +155,8 @@ allOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml)
+* YAML version: [schema.yaml](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json)
+* JSON version: [schema.json](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml)
 
 
 # JSON-LD Context
@@ -250,13 +250,15 @@ Links to the schema:
       "@container": "@list"
     },
     "topology": {
+      "@context": {
+        "references": {
+          "@id": "geojson:relatedFeatures",
+          "@type": "@id",
+          "@container": "@list"
+        }
+      },
       "@type": "@id",
       "@id": "geojson:topology"
-    },
-    "references": {
-      "@id": "geojson:relatedFeatures",
-      "@type": "@id",
-      "@container": "@list"
     },
     "Arc": "geojson:Arc",
     "ArcWithCenter": "geojson:ArcWithCenter",
@@ -280,13 +282,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld)
+[context.jsonld](https://rob-metalinkage.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/topo-feature](https://github.com/ogcincubator/topo-feature)
+* URL: [https://github.com/rob-metalinkage/topo-feature](https://github.com/rob-metalinkage/topo-feature)
 * Path: `_sources/features/topo-line`
 

@@ -1,10 +1,16 @@
 Validation report for ogc.geo.topo.features.topo-feature-collection - TopoFeatureCollection
-Generated 2026-04-07T07:04:21.902575+00:00
+Generated 2026-04-07T07:04:21.842808+00:00
+=== General ===
+
+** Validation error **
+Test was expected to fail but it did not.
+=== End General ===
+
 === Files ===
-Using examples/linestring.json from examples
+Using linestring-fail.json from test resources
 JSON-LD context is present - uplifting
-Output JSON-LD example_2_1.jsonld created
-Output Turtle example_2_1.ttl created
+Output JSON-LD linestring-fail.jsonld created
+Output Turtle linestring-fail.ttl created
 === End Files ===
 
 === JSON Schema ===
@@ -17,8 +23,8 @@ Validation result for _sources/features/topo-feature/tests/geometry-coordinates.
   Conforms: True
   
 Focus nodes for _sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nc7e06802f77e493bbf28baed655250a4b3: <http://www.example.com/features/P2>/geojson:geometry,<http://www.example.com/features/P1>/geojson:geometry
- - Shape _:nc7e06802f77e493bbf28baed655250a4b1: <http://www.example.com/features/P2>/geojson:geometry,<http://www.example.com/features/P1>/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b3: <file:///github/workspace/P3>/geojson:geometry,<file:///github/workspace/P1>/geojson:geometry
+ - Shape _:nc7e06802f77e493bbf28baed655250a4b1: <file:///github/workspace/P3>/geojson:geometry,<file:///github/workspace/P1>/geojson:geometry
 
 Validation result for _sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
