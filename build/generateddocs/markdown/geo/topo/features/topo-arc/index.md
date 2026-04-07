@@ -62,7 +62,7 @@ radius and arcLength are implicit but may be provided as optional properties of 
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "1853004",
   "type": "Feature",
   "featureType": "my:ArcFeature",
@@ -133,7 +133,7 @@ Note that properties "radius" and "arcLength" are not required in the containing
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "arc1",
   "type": "Feature",
   "featureType": "my:ArcFeature",
@@ -201,7 +201,7 @@ Arc by Chord example.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "chord1",
   "type": "Feature",
   "featureType": "my:ArcChordFeature",
@@ -267,7 +267,7 @@ Circle with Center example.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "1853004",
   "type": "Feature",
   "featureType": "my:CircleFeature",
@@ -330,7 +330,7 @@ Cubic Spline example.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "1853004",
   "type": "Feature",
   "featureType": "my:SplineFeature",
@@ -399,7 +399,7 @@ Cubic Spline with Tangents example.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "1853004",
   "type": "Feature",
   "featureType": "my:SplineFeature",
@@ -449,11 +449,11 @@ Cubic Spline with Tangents example.
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Arc Feature with geometry by reference
 allOf:
-- $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
+- $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
 - properties:
     topology:
       allOf:
-      - $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
+      - $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
       - oneOf:
         - properties:
             type:
@@ -547,8 +547,8 @@ allOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/schema.yaml)
+* YAML version: [schema.yaml](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json)
+* JSON version: [schema.json](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml)
 
 
 # JSON-LD Context
@@ -674,7 +674,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld)
+[context.jsonld](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld)
 
 
 # For developers

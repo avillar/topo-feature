@@ -43,7 +43,7 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-line/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
   "type": "Feature",
   "id": "LineP1P2",
   "geometry": null,
@@ -98,7 +98,7 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-line/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld",
   "type": "Feature",
   "id": "MultiLineP1P2P3",
   "geometry": null,
@@ -137,11 +137,11 @@ This is a generalisation of the TopoJSON concept using inline data, and hence no
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Line Feature with geometry by reference
 allOf:
-- $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
+- $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
 - properties:
     topology:
       allOf:
-      - $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
+      - $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
       - properties:
           type:
             type: string
@@ -155,8 +155,8 @@ allOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-line/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-line/schema.yaml)
+* YAML version: [schema.yaml](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json)
+* JSON version: [schema.json](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml)
 
 
 # JSON-LD Context
@@ -282,7 +282,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-line/context.jsonld)
+[context.jsonld](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/context.jsonld)
 
 
 # For developers

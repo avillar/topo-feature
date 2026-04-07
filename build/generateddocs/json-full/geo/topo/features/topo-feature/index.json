@@ -15,8 +15,8 @@
   "maturity": "development",
   "scope": "unstable",
   "dependsOn": [
-    "ogc.geo.topo.features.topo-feature-collection",
-    "ogc.geo.topo.datatypes.topology"
+    "ogc.geo.topo.datatypes.topology",
+    "ogc.geo.topo.features.topo-feature-collection"
   ],
   "shaclClosures": [
     "examples/points.ttl"
@@ -28,23 +28,23 @@
   "group": "OGC",
   "shaclShapes": {
     "ogc.geo.topo.features.topo-feature": [
-      "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.topo.features.topo-feature-collection": [
-      "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://avillar.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://avillar.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ]
   },
-  "ldContext": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld",
+  "ldContext": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.json"
+    "application/yaml": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml",
+    "application/json": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature/schema.json",
-  "sourceLdContext": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature/context.jsonld",
-  "resolvedSchemaProperties": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/resolvedProperties.json",
-  "sourceFiles": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/_sources/features/topo-feature/",
+  "sourceSchema": "https://avillar.github.io/topo-feature/_sources/features/topo-feature/schema.json",
+  "sourceLdContext": "https://avillar.github.io/topo-feature/_sources/features/topo-feature/context.jsonld",
+  "resolvedSchemaProperties": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/resolvedProperties.json",
+  "sourceFiles": "https://avillar.github.io/topo-feature/_sources/features/topo-feature/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/avillar/topo-feature/blob/master/build/tests/geo/topo/features/topo-feature/",
@@ -61,17 +61,17 @@
             "examples/points.ttl"
           ],
           "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_1_1.json"
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n<http://www.example.com/features/LineP1P2> a geojson:Feature ;\n    geojson:topology [ a geojson:LineString ;\n            geojson:relatedFeatures ( <http://www.example.com/features/P1> <http://www.example.com/features/P2> ) ] .\n\n",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_1_1.ttl"
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_1_1.ttl"
         }
       ]
     },
@@ -87,22 +87,22 @@
             "examples/lines.ttl"
           ],
           "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_2_1.json"
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_2_1.jsonld"
+          "code": "{\n  \"@context\": \"https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"TriangleP1P2P3\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"Polygon\",\n    \"references\": [\n      [\n        \"LineP1P2\",\n        \"LineP2P3\",\n        \"LineP3P1\"\n      ]\n    ]\n  },\n  \"properties\": null\n}",
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n<http://www.example.com/features/TriangleP1P2P3> a geojson:Feature ;\n    geojson:topology [ a geojson:Polygon ;\n            geojson:relatedFeatures ( ( <http://www.example.com/features/LineP1P2> <http://www.example.com/features/LineP2P3> <http://www.example.com/features/LineP3P1> ) ) ] .\n\n",
-          "url": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/tests/geo/topo/features/topo-feature/example_2_1.ttl"
+          "url": "https://avillar.github.io/topo-feature/build/tests/geo/topo/features/topo-feature/example_2_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Feature with defined topology for bounding elements\nallOf:\n- $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions\n- type: object\n  properties:\n    id:\n      type: string\n    topology:\n      $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml\n      x-jsonld-type: '@id'\n      x-jsonld-id: https://purl.org/geojson/vocab#topology\n  required:\n  - topology\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Feature with defined topology for bounding elements\nallOf:\n- $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml#FeatureOptions\n- type: object\n  properties:\n    id:\n      type: string\n    topology:\n      $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml\n      x-jsonld-type: '@id'\n      x-jsonld-id: https://purl.org/geojson/vocab#topology\n  required:\n  - topology\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
   "gitRepository": "https://github.com/avillar/topo-feature",
   "gitPath": "_sources/features/topo-feature"
 }

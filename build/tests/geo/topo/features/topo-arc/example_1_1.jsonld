@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-arc/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/context.jsonld",
   "id": "1853004",
   "type": "Feature",
   "featureType": "my:ArcFeature",

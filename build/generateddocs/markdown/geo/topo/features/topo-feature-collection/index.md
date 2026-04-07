@@ -63,7 +63,7 @@ can be solids, swept volumes or any other concept.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
   "type": "FeatureCollection",
   "id": "pointsonly",
   "features": [
@@ -168,7 +168,7 @@ can be solids, swept volumes or any other concept.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
   "type": "FeatureCollection",
   "id": "line",
   "features": [
@@ -341,7 +341,7 @@ can be solids, swept volumes or any other concept.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld",
   "type": "FeatureCollection",
   "id": "TopoCollectionExample",
   "features": [
@@ -513,15 +513,15 @@ properties:
     type: array
     items:
       anyOf:
-      - $ref: https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
+      - $ref: https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
       - $ref: '#/$defs/PointOptions'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml)
+* YAML version: [schema.yaml](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json)
+* JSON version: [schema.json](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml)
 
 
 # JSON-LD Context
@@ -660,7 +660,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld)
+[context.jsonld](https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/context.jsonld)
 
 
 # For developers

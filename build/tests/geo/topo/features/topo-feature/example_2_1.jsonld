@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/context.jsonld",
+  "@context": "https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/context.jsonld",
   "type": "Feature",
   "id": "TriangleP1P2P3",
   "geometry": null,

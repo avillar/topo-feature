@@ -176,14 +176,14 @@ path	@id	schema
 /_anyOf/1/features/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
 /_anyOf/1/features/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
 /features		/github/workspace/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
-/features/_anyOf/0/id		https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/features/_anyOf/0/topology/_oneOf/0/type	@type	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/vocab#relatedFeatures	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/features/_anyOf/0/topology/_oneOf/1/type	@type	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/vocab#relatedFeatures	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/features/_anyOf/0/topology/_oneOf/2/type	@type	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/features/_anyOf/0/topology/_oneOf/2/references	https://purl.org/geojson/vocab#relatedFeatures	https://raw.githubusercontent.com/avillar/topo-feature/undefined/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/id		https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://avillar.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/features/_anyOf/0/topology/_oneOf/0/type	@type	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/vocab#relatedFeatures	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/topology/_oneOf/1/type	@type	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/vocab#relatedFeatures	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/topology/_oneOf/2/type	@type	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/features/_anyOf/0/topology/_oneOf/2/references	https://purl.org/geojson/vocab#relatedFeatures	https://avillar.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
 /features/_anyOf/1/_anyOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
 /features/_anyOf/1/_anyOf/0/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
 /features/_anyOf/1/_anyOf/0/featureType	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
